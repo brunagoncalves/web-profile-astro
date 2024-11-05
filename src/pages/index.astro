@@ -1,27 +1,22 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Bruna Gonçalves">
+  <Navbar />
   <main>
-    <Navbar />
-    
     <div>
       <h1>Web Developer</h1>
-      <p>Hello! I'm Bruna Gonçalves, currently working as an IT Manager with a passion for cybersecurity and web development. 
-        I’m enhancing my skills in Bug Bounty through Pato Academy and advancing in frontend development with practical 
-        challenges from Frontend Mentor. My motto? Never stop learning and exploring new technologies to keep evolving.
+      <p>
+        Hello! I'm Bruna Gonçalves, currently working as an IT Manager with a
+        passion for cybersecurity and web development. I’m enhancing my skills
+        in Bug Bounty through Pato Academy and advancing in frontend development
+        with practical challenges from Frontend Mentor. My motto? Never stop
+        learning and exploring new technologies to keep evolving.
       </p>
     </div>
   </main>
+  <Footer />
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    max-width: calc(100% - 2rem);
-    color: white;
-  }
-</style>
