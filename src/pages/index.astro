@@ -2,21 +2,60 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Bruna Gonçalves">
-  <Navbar />
   <main>
-    <div>
-      <h1>Web Developer</h1>
-      <p>
-        Hello! I'm Bruna Gonçalves, currently working as an IT Manager with a
-        passion for cybersecurity and web development. I’m enhancing my skills
-        in Bug Bounty through Pato Academy and advancing in frontend development
-        with practical challenges from Frontend Mentor. My motto? Never stop
-        learning and exploring new technologies to keep evolving.
-      </p>
+    <Navbar />
+    <!-- Home -->
+    <div class="px-6 lg:px-8 pt-14">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="text-center">
+          <h1 class="text-balance text-5xl font-semibold tracking-tight sm:text-7xl">Web Developer</h1>
+          <p class="mt-8 text-pretty text-base sm:text-lg">
+            Hello! I'm Bruna Gonçalves, currently working as an IT Manager with a
+            passion for cybersecurity and web development. I’m enhancing my skills
+            in Bug Bounty through Pato Academy and advancing in frontend development
+            with practical challenges from Frontend Mentor. My motto? Never stop
+            learning and exploring new technologies to keep evolving.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-3">
+            <a class="bg-white text-gray-900 font-semibold px-8 py-4 border rounded-full" href="#">Get In Touch</a>
+            <a class="bg-transparent border border-white px-8 py-4 rounded-full" href="#">Download CV</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- Skills -->
+    <div class="px-6 lg:px-8 pt-14">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <h2 class="text-center">EXPERIENCE WITH</h2>
+        <div class="flex items-center justify-center gap-6 mt-10">
+          <img src="src/icons/html.svg" alt="">
+          <img src="src/icons/css.svg" alt="">
+          <img src="src/icons/javascript.svg" alt="">
+          <img src="src/icons/bootstrap.svg" alt="">
+          <img src="src/icons/tailwind.svg" alt="">
+          <img src="src/icons/wordpress.svg" alt="">
+          <img src="src/icons/figma.svg" alt="">
+          <img src="src/icons/python.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- Projects -->
+    <div class="px-6 lg:px-8 pt-14">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <h1 class="font-bold text-4xl text-center">Projects</h1>
+        <div class="grid gap-4 md:grid-cols-2 mt-8">
+          <Card href="#" title="Project One" body="Description" />
+          <Card href="#" title="Project One" body="Description" />
+          <Card href="#" title="Project One" body="Description" />
+          <Card href="#" title="Project One" body="Description" />
+        </div>
+      </div>
+    </div>
+    <Footer />
   </main>
-  <Footer />
 </Layout>
+  
