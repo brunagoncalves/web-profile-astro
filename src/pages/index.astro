@@ -1,61 +1,55 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+import ProjectOne from "../images/project-one.png";
+import ProjectTwo from "../images/project-two.png";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import Card from "../components/Card.astro";
+// import Navbar from "../components/Navbar.astro";
+// import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Bruna Gonçalves">
-  <main>
-    <Navbar />
+  <Navbar />
+  <main class="mx-auto max-w-7xl px-6 py-6 lg:px-8 lg:py-8">
     <!-- Home -->
-    <div class="px-6 lg:px-8 pt-14">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div class="text-center">
-          <h1 class="text-balance text-5xl font-semibold tracking-tight sm:text-7xl">Web Developer</h1>
-          <p class="mt-8 text-pretty text-base sm:text-lg">
-            Hello! I'm Bruna Gonçalves, currently working as an IT Manager with a
-            passion for cybersecurity and web development. I’m enhancing my skills
-            in Bug Bounty through Pato Academy and advancing in frontend development
-            with practical challenges from Frontend Mentor. My motto? Never stop
-            learning and exploring new technologies to keep evolving.
-          </p>
-          <div class="mt-10 flex items-center justify-center gap-x-3">
-            <a class="bg-white text-gray-900 font-semibold px-8 py-4 border rounded-full" href="#">Get In Touch</a>
-            <a class="bg-transparent border border-white px-8 py-4 rounded-full" href="#">Download CV</a>
-          </div>
-        </div>
+    <div class="text-center">
+      <img class="rounded-full block max-w-full mx-auto mb-10" src="src/images/avatar.jpg" alt="">
+      <h1 class="text-balance text-5xl font-semibold tracking-tight sm:text-7xl mb-10">Web Developer</h1>
+      <p class="text-pretty text-base sm:text-lg mb-10">
+        Hello! I'm Bruna Gonçalves, currently working as an IT Manager with a
+        passion for cybersecurity and web development. I’m enhancing my skills
+        in Bug Bounty through Pato Academy and advancing in frontend development
+        with practical challenges from Frontend Mentor. My motto? Never stop
+        learning and exploring new technologies to keep evolving.
+      </p>
+      <div class="flex items-center justify-center gap-x-3">
+        <a class="bg-white text-gray-900 font-semibold px-8 py-4 border rounded-full" href="#">Get In Touch</a>
+        <a class="bg-transparent border border-white px-8 py-4 rounded-full" href="#">Download CV</a>
       </div>
     </div>
     <!-- Skills -->
-    <div class="px-6 lg:px-8 pt-14">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <h2 class="text-center">EXPERIENCE WITH</h2>
-        <div class="flex items-center justify-center gap-6 mt-10">
-          <img src="src/icons/html.svg" alt="">
-          <img src="src/icons/css.svg" alt="">
-          <img src="src/icons/javascript.svg" alt="">
-          <img src="src/icons/bootstrap.svg" alt="">
-          <img src="src/icons/tailwind.svg" alt="">
-          <img src="src/icons/wordpress.svg" alt="">
-          <img src="src/icons/figma.svg" alt="">
-          <img src="src/icons/python.svg" alt="">
-        </div>
+    <div class="mt-20">
+      <h2 class="text-center font-semibold text-xl tracking-[0.25rem]">EXPERIENCE WITH</h2>
+      <div class="flex items-center justify-center mt-12">
+        <img src="src/icons/html.svg" alt="">
+        <img src="src/icons/css.svg" alt="">
+        <img src="src/icons/javascript.svg" alt="">
+        <img src="src/icons/tailwind.svg" alt="">
+        <img src="src/icons/bootstrap.svg" alt="">
+        <img src="src/icons/wordpress.svg" alt="">
+        <img src="src/icons/python.svg" alt="">
+        <img src="src/icons/figma.svg" alt="">
       </div>
     </div>
     <!-- Projects -->
-    <div class="px-6 lg:px-8 pt-14">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <h1 class="font-bold text-4xl text-center">Projects</h1>
-        <div class="grid gap-4 md:grid-cols-2 mt-8">
-          <Card href="#" title="Project One" body="Description" />
-          <Card href="#" title="Project One" body="Description" />
-          <Card href="#" title="Project One" body="Description" />
-          <Card href="#" title="Project One" body="Description" />
-        </div>
+    <div>
+      <h1 class="text-center font-extrabold text-4xl mt-24 mb-7 uppercase">Projects</h1>
+      <div class="grid md:grid-cols-2 gap-6 items-center justify-center">
+        <Card href="#" src={ProjectOne} alt="Alt" title="Click Here to Visit" subtitle="Project One" />
+        <Card href="#" src={ProjectTwo} alt="Alt" title="Click Here to Visit" subtitle="Project Two" />
       </div>
     </div>
-    <Footer />
   </main>
+  <Footer />
 </Layout>
-  
